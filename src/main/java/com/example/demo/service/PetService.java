@@ -15,6 +15,7 @@ public class PetService {
 	private PetInfoRepository petInfoRepository ;
 	public void addPetInfo(Pet pet)
 	{
+		pet.setPetStatus('A');// Set status as available initially
 		petInfoRepository.save(pet);
 	}
 	
@@ -22,6 +23,11 @@ public class PetService {
 	{
 		return (List<Pet>) petInfoRepository.findAll();
 	}
+	 public void updatePetInfo(Character petStatus , String petName ) 
+	{
+		petInfoRepository.updatePetInfo(petStatus, petName);
+	}
+	
 	
 	
 }

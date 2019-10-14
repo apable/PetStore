@@ -14,12 +14,12 @@ public class Pet {
 	@NotEmpty(message="Name must not be empty.")
 	String petName ;
 	String petColor;
-	
-
+	Character petStatus;
 
 	@Override
 	public String toString() {
-		return "Pet [petId=" + petId + ", petName=" + petName + ", petColor=" + petColor + "]";
+		return "Pet [petId=" + petId + ", petName=" + petName + ", petColor=" + petColor + ", petStatus=" + petStatus
+				+ "]";
 	}
 
 	public String getPetColor() {
@@ -44,6 +44,14 @@ public class Pet {
 
 	public void setPetName(String petName) {
 		this.petName = petName;
+	}
+
+	public Character getPetStatus() {
+		return petStatus;
+	}
+	
+	public void setPetStatus(Character petStatus) {
+		this.petStatus = petStatus;
 	}
 
 }
